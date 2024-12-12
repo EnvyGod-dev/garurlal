@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гараар Урлахуй - Захиалгууд</title>
+    <link rel="stylesheet" href="/frontend/assets/styles/cartscreen.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Гараар Урлахуй</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/frontend/index.html">Бидний Тухай</a></li>
+                    <li><a href="/frontend/screens/productscreen.html">Бүтээгдэхүүн</a></li>
+                    <li><a href="/frontend/screens/cartscreen.html" class="active">Миний Захиалгууд</a></li>
+                    <li><a href="/frontend/screens/loginscreen.html">Нэвтрэх</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="cart-section">
+            <h2>Захиалгууд</h2>
+            <div class="cart-container">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <img src="/frontend/assets/images/item1.png" alt="Product 1">
+                        <div class="item-details">
+                            <p>Торгон Материал</p>
+                            <p>Үнэлгээ: 4.5</p>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <img src="/frontend/assets/images/item2.png" alt="Product 2">
+                        <div class="item-details">
+                            <p>Торгон Материал</p>
+                            <p>Үнэлгээ: 4.8</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h3>Худалдан авалт:</h3>
+                    <p>Нийт дүн: <span id="total-price">₮120,000</span></p>
+                    <p>Төлбөрийн мэдээлэл:</p>
+                    <button class="btn-primary">Төлбөр төлөх</button>
+                    <button class="btn-secondary" onclick="cancelOrder()">Буцах</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function cancelOrder() {
+            window.location.href = "/frontend/screens/productscreen.html";
+        }
+    </script>
+</body>
+
+</html>
